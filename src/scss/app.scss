@@ -1,0 +1,71 @@
+@import "variables";
+@import "general";
+@import "header";
+@import "flex";
+
+.login-section {
+  padding: 200px 0;
+  text-align: center;
+
+  @include flex-container;
+  flex-direction: column;
+
+  @include wide-styles {
+    padding: 200px 20px;
+  }
+}
+
+.bg-banner {
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.login-form {
+  @include flex-container(space-between);
+  flex-wrap: wrap;
+  gap: 0 24px;
+
+  max-width: 570px;
+  margin: 0 20px;
+
+  @media screen and (max-width: 610px) {
+    margin: 0;
+  }
+
+  & label {
+    flex-grow: 1;
+    flex-basis: 10%;
+
+    min-width: 270px;
+    min-height: 50px;
+
+    margin-bottom: 1.5rem;
+  }
+
+  & input {
+    min-width: 100%;
+    min-height: inherit;
+    box-sizing: border-box;
+    padding-left: 20px;
+
+    border: 2px solid $dark-gray;
+    border-radius: 3px;
+    background: transparent;
+    color: $white;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  & button {
+    flex-basis: 100%;
+    background: $green;
+    padding: 20px 30px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
