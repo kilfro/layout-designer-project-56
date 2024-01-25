@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Roboto;
   font-weight: normal;
@@ -40,6 +41,27 @@ h2 {
     font-size: 18px;
     line-height: 27px;
   }
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+.btn-green {
+  background: #34c176;
+  border: none;
+}
+.btn-full-width {
+  width: -webkit-fill-available;
+  text-align: center;
 }
 
 .mg-0 {
@@ -90,8 +112,44 @@ h2 {
   }
 }
 
+h3 {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+.btn-green {
+  background: #34c176;
+  border: none;
+}
+.btn-full-width {
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
 .mg-0 {
   margin: 0;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+.flex-columns {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-basis-100 {
+  flex-basis: 100%;
 }
 
 .app-header {
@@ -178,6 +236,163 @@ h2 {
   font-size: 13px;
 }
 
+.flex {
+  display: flex;
+  width: 100%;
+}
+.flex-columns {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+.flex-columns {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: normal;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  color: #cacaca;
+  background: #08020d;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+.btn-green {
+  background: #34c176;
+  border: none;
+}
+.btn-full-width {
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.mg-0 {
+  margin: 0;
+}
+
+.page-pricing {
+  padding-top: 100px;
+  color: #fff;
+}
+
+.pricing-container {
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 50px;
+  max-width: 1240px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 800px) {
+  .pricing-container {
+    flex-direction: column;
+  }
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  border-radius: 1rem;
+  flex-grow: 1;
+}
+.pricing-item h3 {
+  margin-bottom: 200px;
+}
+
+.pricing-value {
+  line-height: 1rem;
+  font-size: 64px;
+}
+.pricing-value::after {
+  content: "руб.";
+  text-transform: uppercase;
+  font-size: 32px;
+  position: relative;
+  left: 16px;
+  top: -24px;
+}
+
+.pricing-footer {
+  font-size: 12px;
+  text-align: center;
+  margin: 64px 0;
+}
+
+.pricing-disclaimer {
+  text-align: center;
+  max-width: 1200px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
 .login-section {
   padding: 200px 0;
   text-align: center;
@@ -192,10 +407,21 @@ h2 {
   }
 }
 
-.bg-banner {
-  background-image: url("../images/banner.png");
+.bg, .bg-500, .bg-250, .bg-free, .bg-banner {
   background-position: center;
   background-size: cover;
+}
+.bg-banner {
+  background-image: url("../images/banner.png");
+}
+.bg-free {
+  background-image: url("../images/subscribe_1.png");
+}
+.bg-250 {
+  background-image: url("../images/subscribe_2.png");
+}
+.bg-500 {
+  background-image: url("../images/subscribe_3.png");
 }
 
 .login-form {
@@ -230,15 +456,6 @@ h2 {
   color: #fff;
 }
 .login-form input::placeholder {
-  color: #fff;
-}
-.login-form button {
-  flex-basis: 100%;
-  background: #34c176;
-  padding: 20px 30px;
-  border-radius: 5px;
-  border: none;
-  text-transform: uppercase;
   color: #fff;
 }
 

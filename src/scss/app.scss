@@ -2,6 +2,7 @@
 @import "general";
 @import "header";
 @import "flex";
+@import "pricing";
 
 .login-section {
   padding: 200px 0;
@@ -15,10 +16,29 @@
   }
 }
 
-.bg-banner {
-  background-image: url("../images/banner.png");
+.bg {
   background-position: center;
   background-size: cover;
+
+  &-banner {
+    @extend .bg;
+    background-image: url("../images/banner.png");
+  }
+
+  &-free {
+    @extend .bg;
+    background-image: url("../images/subscribe_1.png");
+  }
+
+  &-250 {
+    @extend .bg;
+    background-image: url("../images/subscribe_2.png");
+  }
+
+  &-500 {
+    @extend .bg;
+    background-image: url("../images/subscribe_3.png");
+  }
 }
 
 .login-form {
@@ -57,15 +77,5 @@
     &::placeholder {
       color: $white;
     }
-  }
-
-  & button {
-    flex-basis: 100%;
-    background: $green;
-    padding: 20px 30px;
-    border-radius: 5px;
-    border: none;
-    text-transform: uppercase;
-    color: $white;
   }
 }

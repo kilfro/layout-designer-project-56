@@ -3,3 +3,22 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+
+.flex {
+  display: flex;
+  width: 100%;
+
+  &-columns {
+    flex-direction: column;
+  }
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-basis-100 {
+    flex-basis: 100%;
+  }
+}
