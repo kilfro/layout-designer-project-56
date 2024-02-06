@@ -1,0 +1,39 @@
+@import "variables";
+@import "flex";
+@import "general";
+
+.page-app {
+  @include flex-container();
+  flex-direction: column;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.app-data-container {
+  @include flex-container();
+  align-items: flex-start;
+  gap: 144px;
+
+  max-width: 1240px;
+  padding: 0 20px;
+
+  @include max-width(800px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+  }
+
+  .description {
+    max-width: 600px;
+  }
+
+  .btn-download {
+    text-transform: none;
+    background-color: $red;
+    border: none;
+    border-radius: 32px;
+    font-size: 12.8px;
+    padding: 16px 40px;
+  }
+}
+
