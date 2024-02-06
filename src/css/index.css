@@ -54,75 +54,7 @@ h3 {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-}
-.btn-green {
-  background: #34c176;
-  border: none;
-}
-.btn-full-width {
-  width: -webkit-fill-available;
-  text-align: center;
-}
-
-.mg-0 {
-  margin: 0;
-}
-
-@font-face {
-  font-family: Roboto;
-  font-weight: normal;
-  src: url("../fonts/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: Roboto;
-  font-weight: bold;
-  src: url("../fonts/Roboto-Bold.ttf");
-}
-body {
-  font-family: Roboto, sans-serif;
-  line-height: 1.5;
-  color: #cacaca;
-  background: #08020d;
-  margin: 0;
-}
-
-h1 {
-  font-size: 60px;
-  line-height: 90px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 450px) {
-  h1 {
-    font-size: 30px;
-    line-height: 45px;
-  }
-}
-
-h2 {
-  font-size: 38px;
-  line-height: 57px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 450px) {
-  h2 {
-    font-size: 18px;
-    line-height: 27px;
-  }
-}
-
-h3 {
-  text-transform: uppercase;
-}
-
-.btn {
-  padding: 20px 30px;
-  border-radius: 5px;
-  border: 1px #fff solid;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
+  background-color: transparent;
 }
 .btn-green {
   background: #34c176;
@@ -321,6 +253,7 @@ h3 {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+  background-color: transparent;
 }
 .btn-green {
   background: #34c176;
@@ -391,6 +324,264 @@ h3 {
   max-width: 1200px;
   margin-top: 40px;
   padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+.flex-columns {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: normal;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  color: #cacaca;
+  background: #08020d;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+}
+.btn-green {
+  background: #34c176;
+  border: none;
+}
+.btn-full-width {
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.mg-0 {
+  margin: 0;
+}
+
+.page-news {
+  padding-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.page-news h2 {
+  text-align: center;
+}
+
+.news-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 65px;
+  max-width: 1240px;
+  padding: 0 20px;
+}
+
+.news {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 50px;
+}
+@media screen and (max-width: 800px) {
+  .news {
+    flex-direction: column;
+  }
+}
+.news img {
+  flex-shrink: 1;
+}
+.news:nth-child(2) {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 800px) {
+  .news:nth-child(2) {
+    flex-direction: column;
+  }
+}
+
+.news-description {
+  flex-basis: 50%;
+  margin-bottom: 18px;
+}
+.news-description h3 {
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: none;
+  margin-top: 0;
+  font-weight: normal;
+}
+@media screen and (max-width: 450px) {
+  .news-description h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.news-description p {
+  margin-bottom: 24px;
+}
+.news-description .author-label {
+  margin-bottom: 48px;
+}
+
+.singer-photo {
+  background-position: center;
+  background-size: cover;
+  width: 575px;
+  flex-basis: 50%;
+}
+@media screen and (max-width: 800px) {
+  .singer-photo {
+    width: 100%;
+    flex-basis: 100%;
+    min-height: 186px;
+  }
+}
+.singer-photo.bg-eminem {
+  background-image: url("../images/Music to Be Murdered By.png");
+}
+.singer-photo.bg-ozborn {
+  background-image: url("../images/Ordinary Man.png");
+}
+
+.author-label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+}
+.author-label .author {
+  color: #f89202;
+}
+.author-label img {
+  height: 19px;
+  width: 19px;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: normal;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  color: #cacaca;
+  background: #08020d;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+}
+.btn-green {
+  background: #34c176;
+  border: none;
+}
+.btn-full-width {
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.mg-0 {
+  margin: 0;
 }
 
 .login-section {

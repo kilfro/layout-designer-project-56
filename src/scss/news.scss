@@ -1,0 +1,105 @@
+@import "flex";
+@import "variables";
+@import "general";
+
+.page-news {
+  padding-top: 100px;
+  @include flex-container();
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.news-container {
+  @include flex-container();
+  flex-direction: column;
+  gap: 65px;
+  max-width: 1240px;
+  padding: 0 20px;
+}
+
+.news{
+  @include flex-container(flex-start, stretch);
+  gap: 50px;
+
+  @include max-width(800px) {
+    flex-direction: column;
+  }
+
+  img {
+    flex-shrink: 1;
+  }
+
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+
+    @include max-width(800px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.news-description {
+  flex-basis: 50%;
+  margin-bottom: 18px;
+
+  h3 {
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: none;
+    margin-top: 0;
+    font-weight: normal;
+
+    @include mobile-styles {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+
+  .author-label {
+    margin-bottom: 48px;
+  }
+}
+
+.singer-photo {
+  background-position: center;
+  background-size: cover;
+  width: 575px;
+  flex-basis: 50%;
+
+  @include max-width(800px) {
+    width: 100%;
+    flex-basis: 100%;
+    min-height: 186px;
+  }
+
+  &.bg-eminem {
+    background-image: url("../images/Music to Be Murdered By.png");
+  }
+
+  &.bg-ozborn {
+    background-image: url("../images/Ordinary Man.png");
+  }
+}
+
+.author-label {
+  @include flex-container();
+  gap: 16px;
+
+  font-size: 12px;
+
+  .author {
+    color: $orange;
+  }
+
+  img {
+    height: 19px;
+    width: 19px;
+  }
+}
