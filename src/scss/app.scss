@@ -4,6 +4,7 @@
 @import "pricing";
 @import "news";
 @import "application";
+@import "footer";
 @import "general";
 
 .login-section {
@@ -40,6 +41,10 @@
   &-500 {
     @extend .bg;
     background-image: url("../images/subscribe_3.png");
+  }
+
+  &-gradient {
+    background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
   }
 }
 
